@@ -1,13 +1,16 @@
 
-import React from "react";
-import './../styles/App.css';
+import React from "react"
 
-const App = () => {
+
+const WeatherDisplay = ({data})=>{
+    const {temperature,conditions} = data;
   return (
-    <div>
-        {/* Do not remove the main div */}
+  <div>
+    <p>Temperature: {temperature}</p><span style={{color:temperature>20?"rgb(255, 0, 0)":"blue"}}></span>
+
+    <p>Conditions: {conditions}</p>
     </div>
-  )
+)
 }
 
-export default App
+export default WeatherDisplay
